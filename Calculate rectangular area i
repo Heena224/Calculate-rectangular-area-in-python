@@ -1,0 +1,20 @@
+def calculate_area(length, width):
+    """
+    Calculate the area of a rectangle.
+
+    Parameters:
+    length (int): The length of the rectangle.
+    width (int): The width of the rectangle.
+
+    Returns:
+    int: The area of the rectangle.
+
+    Raises:
+    TypeError: If length or width is not an integer.
+    ValueError: If length or width is not between 1 and 1000.
+    """
+    if not isinstance(length, int) or not isinstance(width, int):
+        raise TypeError("Length and width must be integers.")
+    if length < 1 or length > 1000 or width < 1 or width > 1000:
+        raise ValueError("Given length and width must be between 1 and 1000.")
+    return length * width
